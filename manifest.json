@@ -1,0 +1,19 @@
+﻿{
+  "manifest_version": 2,
+
+  "name": "天猫自动下单",
+  "description": "该扩展可以在天猫抢购时间到时自动下单",
+  "version": "1.0",
+	"content_scripts": [
+	    {
+	      "matches": ["http://*.tmall.com/*"],
+	      "js": ["seed-min.js", "tmall_buy.js"]
+	    }
+	],
+  "permissions": [
+    "http://*.tmall.com/*"
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
